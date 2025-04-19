@@ -9,7 +9,6 @@ from extract_utils.fixups_blob import (
     blob_fixups_user_type,
 )
 from extract_utils.fixups_lib import (
-    lib_fixup_remove,
     lib_fixups,
     lib_fixups_user_type,
 )
@@ -43,13 +42,12 @@ lib_fixups: lib_fixups_user_type = {
         'vendor.qti.imsrtpservice@3.0',
         'vendor.qti.hardware.wifidisplaysession@1.0',
     ): lib_fixup_vendor_suffix,
-    (
-        'libwpa_client',
-    ): lib_fixup_remove,
 }
 
 
 blob_fixups: blob_fixups_user_type = {
+    'system_ext/bin/wfdservice64': blob_fixup()
+        .add_needed('libwfdservice_shim.so'),
     'system_ext/etc/init/wfdservice.rc': blob_fixup()
         .regex_replace(r'(start|stop) wfdservice\b', r'\1 wfdservice64'),
     'system_ext/lib64/libwfdnative.so': blob_fixup()

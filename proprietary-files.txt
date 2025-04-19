@@ -1,8 +1,5 @@
-# These proprietary files are extracted from Redmi Note 12 Pro 4G (codenamed `sweet_k6a`) OS1.0.10.0.THGMIXM, unless pinned
+# These proprietary files are extracted from Redmi Note 12 Pro 4G (codenamed `sweet_k6a`) OS1.0.15.0.THGMIXM, unless pinned
 # mojito: Redmi/mojito/mojito:12/RKQ1.210614.002/V14.0.8.0.SKGMIXM:user/release-keys
-
-# Current blobs with ELF checks disabled:
-# imsdatadaemon, libcne, libwqe, lowi-server depend on libwpa_client, which is a gnu makefile target
 
 # ADSP
 vendor/bin/adsprpcd
@@ -70,11 +67,11 @@ vendor/bin/cnd
 vendor/etc/cne/mwqem.conf
 vendor/etc/cne/profileMwqem.xml
 vendor/etc/init/cnd.rc
-vendor/lib64/libcne.so;DISABLE_CHECKELF
+vendor/lib64/libcne.so
 vendor/lib64/libcneapiclient.so
 vendor/lib64/libcneoplookup.so
 vendor/lib64/libwms.so
-vendor/lib64/libwqe.so;DISABLE_CHECKELF
+vendor/lib64/libwqe.so
 vendor/lib64/libxml.so
 vendor/lib64/vendor.qti.data.factory@2.0.so
 vendor/lib64/vendor.qti.data.factory@2.1.so
@@ -241,7 +238,7 @@ vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 
 # GPS
 vendor/bin/loc_launcher
-vendor/bin/lowi-server;DISABLE_CHECKELF
+vendor/bin/lowi-server
 vendor/bin/slim_daemon
 vendor/bin/xtra-daemon
 vendor/etc/vintf/manifest/vendor.qti.gnss@4.0-service.xml
@@ -284,7 +281,7 @@ system_ext/lib64/vendor.qti.imsrtpservice@3.0.so
 system_ext/lib64/vendor.qti.imsrtpservice@3.1.so
 system_ext/priv-app/ims/ims.apk
 vendor/bin/ims_rtp_daemon
-vendor/bin/imsdatadaemon;DISABLE_CHECKELF
+vendor/bin/imsdatadaemon
 vendor/bin/imsqmidaemon
 vendor/bin/imsrcsd
 vendor/etc/init/ims_rtp_daemon.rc
@@ -527,7 +524,7 @@ vendor/bin/cnss-daemon
 
 # WiFi Display (system) - from dodge AP3A.240617.008
 system/framework/WfdCommon.jar;BOOT_JAR|7f5fa507edca51663be2d243a3bc72799c1a31e2
-system_ext/bin/wfdservice64|710637051aaf51050e4c9a102a65fc859fbdfdfd
+system_ext/bin/wfdservice64|710637051aaf51050e4c9a102a65fc859fbdfdfd|d6fb12a1e0676e46f139598917fdfb5ed10b3cdd
 system_ext/etc/init/wfdservice.rc|907def8565d8f91f531ca7dfad880af05d540b0c|3dfd29a44f37c971b7707b6e47b2b601a9119d12
 system_ext/etc/permissions/wfd-system-ext-privapp-permissions-qti.xml|6669d5ee462c981663b8ac573d84d334e4eed96c
 system_ext/etc/seccomp_policy/wfdservice64.policy|12c64d143ee80e85d6d27c4dda7434d5eb4a8b98
